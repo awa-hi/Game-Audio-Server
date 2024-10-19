@@ -2,11 +2,11 @@ import socket
 import time
 import threading
 def get_current_time():
-    current_time = get_current_time()
     current_struct_time = time.localtime()
     formatted_time = time.strftime("%Y-%m-%d %H:%M:%S", current_struct_time)
     return formatted_time
 def log_output(input,input2):
+    current_time = get_current_time()
     print("[{0}]".format(current_time),"[{0}]".format(input),input2)
 users=[]
 main_server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
